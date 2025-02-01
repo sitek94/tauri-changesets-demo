@@ -8,6 +8,20 @@ releases managed by [changesets](https://github.com/changesets/changesets)
 - After merging the release PR, the release is published to GitHub Releases with new app binaries
 - App automatically checks for updates from GitHub Releases
 
+## Setup
+
+In order for this setup to work, you need to have a few things set up:
+
+1. Rename every occurrence of `tauri-changesets-demo` to your app name
+2. Generate a signing key for your app, e.g. using tauri signer
+
+   ```bash
+   bunx tauri signer generate -w ~/.tauri/tauri-demo.key
+   ```
+
+3. Update `plugins.updater.pubkey` in `tauri.conf.json` with the public key
+4. Create
+
 ## Bootstrapped with Tauri v2
 
 - [Tauri 2.0](https://tauri.app/)
